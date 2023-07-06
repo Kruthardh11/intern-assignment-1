@@ -1,4 +1,4 @@
-# Web Application
+# Internship Assignment 1
 
 This is a static web application developed as part of an assessment. The application replicates the design provided and includes the following features:
 
