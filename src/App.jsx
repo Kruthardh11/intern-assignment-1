@@ -8,6 +8,9 @@ import { AiOutlineLeft } from "react-icons/ai";
 import { BsFillCloudyFill } from "react-icons/bs";
 import graph from './assets/graph.png';
 import building from './assets/building.png';
+import semicircle from './assets/semicircle.png';
+import semi2 from './assets/semi2.png';
+
 
 
 function App() {
@@ -22,7 +25,7 @@ function App() {
   return (
   
       <div className='bg-blue-200 h-screen pl-[17%] pt-[5%] pb-[2%] flex '>
-        <div className="w-[20%] h-[89%] bg-blue-500 rounded-l-2xl flex flex-col">
+        <div className="w-[20%] h-[93%] bg-blue-500 rounded-l-2xl flex flex-col">
           <div className='pt-6  px-4 flex '>
             <FiPlus className='bg-white h-5 w-5 text-blue-500 rounded  ' />
             <div className="w-4 h-2 bg-white rounded-full mr-1 ml-12 mt-1"></div>
@@ -58,18 +61,18 @@ function App() {
 
           </div>
 
-          <div className='flex mt-8'>
+          <div className='flex mt-6'>
             <AiOutlineLeft  className='text-white w-5 h-5 mt-4  ml-1'/>
-            <p className='text-white text-6xl mb-10 ml-[17%] '> 27 °</p>
+            <p className='text-white text-6xl mb-5 ml-[17%] '> 27°</p>
             <AiOutlineRight className='text-white w-5 h-5 ml-[18%] mt-4 mr-1' />
           </div>
           <div className='flex pl-[30%] '>
-            <p className='text-white flex'><BsSunFill className=' h-4 w-4 mr-2 mt-1'/> Sunny</p>
+            <p className='text-white flex'><BsSunFill className=' h-4 w-4 mr-2 mt-1'/>  Sunny</p>
           </div>
-          <img src={building} alt='' className='w-[50%] h-[50%] mt-3 ml-0m' />
+          <img src={building} alt='' className='w-[80%] h-[56%]' />
         </div>
 
-         <div className="w-[60%] h-[89%] bg-blue-100 p-3 px-8 rounded-2xl">
+         <div className="w-[60%] h-[93%] bg-blue-100 p-3 px-8 rounded-2xl">
 
           <div className='m-2 flex flex-col-2'>
             <div className=''>
@@ -81,15 +84,14 @@ function App() {
               <div className="bg-black w-2 h-2 rounded-full ml-1"></div>
               <div className="bg-black w-2 h-2 rounded-full ml-1"></div>
           </div>
-            
           </div>
 
-         <div className="bg-white p-1  rounded-xl h-[43%]">
+         <div className="bg-white p-1  rounded-xl h-[41%]">
           <div className='flex items-start justify-between text-sm p-1 pt-3'>
             <p className='font-semibold'>Upcoming hours</p>
             <div className="flex flex-row-reverse">
-              <p className="order-3 mr-5 bg-gray-200 rounded-full p-1 opacity-50">Next days</p>
-              <p className="order-2 bg-gray-200 rounded-full p-1">rain precipitation</p>
+            <p className="order-3 bg-gray-200 rounded-full p-1 opacity-50">rain precipitation</p>
+              <p className="order-2 mr-5 bg-gray-200 rounded-full p-1 ml-4 flex">Next days <AiOutlineRight className='text-gray-600 mt-1 ml-1'/></p>
             </div>
           </div>
           <div className='flex flex-col-8 text-sm mt-2'>
@@ -141,7 +143,7 @@ function App() {
             {/* Small Cards */}
           <div className="grid grid-cols-3 gap-4 mt-3 ">
 
-              <div className="bg-white rounded-lg h-24 p-4">
+              <div className="bg-white rounded-lg h-26 p-4">
                 <div className='text-xs flex mb-2'>
                   <p className='ml-4'>Humidity </p>
                   <BsFillDropletFill className='text-blue-500 h-5 w-5 ml-[35%]' />
@@ -158,16 +160,18 @@ function App() {
                   </div>
               </div>
 
-              <div className="bg-white rounded-lg h-24 p-4">
-              <div className='text-xs flex mb-2'>
+              <div className="bg-white rounded-lg h-26 p-4">
+              {/* <div className='text-xs flex mb-2'>
                   <p className='ml-4'>Wind </p>
                   <BsFillCloudFog2Fill className='text-blue-500 h-5 w-5 ml-[35%]' />
                 </div>
-                
+                 */}
+                 <img src={semi2} alt='' className='h-[100%] ' />
+
 
               </div>
 
-              <div className="bg-white rounded-lg h-24 p-4">
+              <div className="bg-white rounded-lg h-26 p-4">
               <div className='text-xs flex mb-2'>
                   <p className='ml-4'>Precipitaion </p>
                   <BsFillCloudRainFill className='text-blue-500 h-5 w-5 ml-[35%]' />
@@ -187,40 +191,42 @@ function App() {
         </div>
       ))}
     </div>
-
               </div>
 
-              <div className="bg-white rounded-lg h-24 p-4">
+              <div className="bg-white rounded-lg h-26 p-4">
               <div className='text-xs flex mb-2'>
                   <p className='ml-4'>UV index </p>
                   <BsSunFill className='text-blue-500 h-5 w-5 ml-[35%]' />
                 </div>
-                <div className='flex items-center justify-center my-1'>
+                <div className='flex items-center justify-center'>
                   <p className='text-sm font-extrabold mr-3'>4 medium</p>
                 </div>
-                <div className='flex'>
-                  
-
+                <div className='flex text-xs text-gray-400'>
+                  <span className='ml-3'>0-2</span>
+                  <span className='ml-5'>3-5</span>
+                  <span className='ml-4'>6-7</span>
+                  <span className='ml-4'>8-10</span>
+                  <span className='ml-4'>11+</span>
                 </div>
                 <div className='flex'>
-                <div className="w-6 h-2 bg-blue-500 rounded-lg mt-2 mr-2 ml-4 "><p className='text-xs text-gray-400 mt-1'></p></div>
-                <div className="relative w-6 h-2 bg-gray-300 rounded-lg mt-2 mr-2">
-                     <div className="absolute top-0 left-0 h-full bg-blue-500 rounded-lg" style={{ width: '42%' }}></div>
+                <div className="w-6 h-2 bg-blue-500 rounded-lg  mr-3 ml-3"><p className='text-xs text-gray-400 '></p></div>
+                <div className="relative w-6 h-2 bg-gray-300 rounded-lg mr-3">
+                     <div className="absolute top-0 left-0 h-full bg-blue-500 rounded-lg" style={{ width: '50%' }}></div>
                   </div>
-                  <div className="w-6 h-2 bg-blue-500 rounded-lg mt-2 mr-2"><p className='text-xs text-gray-400 mt-1'></p></div>
-                  <div className="w-6 h-2 bg-blue-500 rounded-lg mt-2 mr-2"><p className='text-xs text-gray-400 mt-1'></p></div>
-                  <div className="w-6 h-2 bg-blue-500 rounded-lg mt-2 mr-2"><p className='text-xs text-gray-400 mt-1'></p></div>
+                  <div className="w-6 h-2 bg-gray-300 rounded-lg mr-3"><p className='text-xs text-gray-400 '></p></div>
+                  <div className="w-6 h-2 bg-gray-300 rounded-lg mr-3"><p className='text-xs text-gray-400 '></p></div>
+                  <div className="w-6 h-2 bg-gray-300 rounded-lg mr-3"><p className='text-xs text-gray-400 '></p></div>
                 </div>
               </div>
-              <div className="bg-white rounded-lg h-24 p-4">
+              <div className="bg-white rounded-lg h-26 p-4">
               <div className='text-xs flex mb-2'>
                   <p className='ml-4'>Feels like </p>
                   <BsThermometerHalf className='text-blue-500 h-5 w-5 ml-[35%]' />
                 </div>
                 <div className='flex items-center justify-center mt-1'>
-                  <p className='text-sm font-extrabold mr-3'>30 °</p>
+                  <p className='text-sm font-extrabold mr-3'>30°</p>
                 </div>
-                <div className='flex text-xs text-gray-300'>
+                <div className='flex text-xs text-gray-400'>
                   <p className='ml-4'>0</p>
                   <p className='ml-[32%]'>25</p>
                   <p className='ml-12'>50</p>
@@ -229,7 +235,7 @@ function App() {
                      <div className="absolute top-0 left-0 h-full bg-blue-500 rounded-lg" style={{ width: '65%' }}></div>
                   </div>
               </div>
-              <div className="bg-white rounded-lg h-24 p-4">
+              <div className="bg-white rounded-lg h-26 p-4">
               <div className='text-xs flex mb-2'>
                   <p className='ml-4'>Chance of rain </p>
                   <BsUmbrellaFill className='text-blue-500 h-5 w-5 ml-[35%]' />
@@ -237,7 +243,7 @@ function App() {
                 <div className='flex items-center justify-center mt-1'>
                   <p className='text-sm font-extrabold mr-3'>42%</p>
                 </div>
-                <div className='flex text-xs text-gray-300'>
+                <div className='flex text-xs text-gray-400'>
                   <p className='ml-4'>0</p>
                   <p className='ml-5'>25</p>
                   <p className='ml-5'>50</p>
